@@ -1,0 +1,13 @@
+name: Pixel Value, soon be Opened
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      title: "Pixel Value official site"
+
+url: "http://pixelvalue.io"
+og_image: "/assets/og_image.png"
