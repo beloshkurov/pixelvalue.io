@@ -10,7 +10,7 @@
 
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:site_name" content="Pixel Value">
-    <meta property="og:image" content="{{ site.url + site.og_image }}"/>
+    <meta property="og:image" content="{{ site.url }}{{ site.og_image }}"/>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US" />
 
@@ -21,40 +21,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     <script src="https://unpkg.com/headroom.js"></script>
     <script>
-
-
       (function () {
         var triangilifier, headroom;
-        window.addEventListener('resize', function () {
-          var resizeTimeout;
-          function resizeThrottler() {
-            // ignore resize events as long as an actualResizeHandler execution is in the queue
-            if ( !resizeTimeout ) {
-              resizeTimeout = setTimeout(function() {
-                resizeTimeout = null;
-                updateView()
-             }, 66); //15 fps
-            }
-          }
-        }, false)
-
-        function updateView() {
-
-        }
 
         function draw() {
           var imagePath = 'url(\'' + triangilifier.png() + '\')';
           document.body.style.backgroundImage = imagePath;
-          //canvas.classList.add('canvas-background')
-          //document.body.insertBefore(canvas, document.querySelector('footer'))
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-          window.t = triangilifier = Trianglify({
+          triangilifier = Trianglify({
               width: window.innerWidth,
               height: window.innerHeight,
-              //x_colors: ["#f7fcfd", "#e0ecf4", "#bfd3e6", "#9ebcda", "#8c96c6", "#8c6bb1", "#88419d", "#810f7c", "#4d004b"],
-              //x_colors: ["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
               x_colors: ["#023858", "#045a8d", "#0570b0", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
               y_colors: "match_x"
           });
@@ -62,7 +40,19 @@
           headroom = new Headroom(document.querySelector('header'), { tolerance: 100 });
           headroom.init()
           draw()
+
+          (function generateMail() {
+            ML="=mvi\".ae:/pf>nuo@t<hxl r";
+            MI="B6FCG7;04163EA?83=;?@:3D7E26E>753?4<3=;?@:3D7E26E>753?B96<";
+            OT="";
+            for(j=0;j<MI.length;j++){
+              OT+=ML.charAt(MI.charCodeAt(j)-48);
+            }
+            document.querySelector('.content-mailer').innerHTML = OT;
+          }())
         })
+
+
       })()
     </script>
   </head>

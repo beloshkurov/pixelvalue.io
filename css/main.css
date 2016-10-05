@@ -22,14 +22,6 @@ body {
   overflow: hidden;
 }
 
-.canvas-background {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 .content {
   margin-top: 97px;
   display: flex;
@@ -46,8 +38,8 @@ body {
   font-size: 5rem;
   text-align: center;
 }
-.content--description {
-
+.content--mailer {
+  display: inline-block;
 }
 
 header {
