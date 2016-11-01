@@ -5,17 +5,31 @@ html, body {
 }
 
 @font-face {
-    font-family: 'aaarghnormal';
-    src: url('/fonts/aaargh_normal_macroman/Aaargh-webfont.eot');
-    src: url('/fonts/aaargh_normal_macroman/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/aaargh_normal_macroman/Aaargh-webfont.woff') format('woff'),
-         url('/fonts/aaargh_normal_macroman/Aaargh-webfont.ttf') format('truetype'),
-         url('/fonts/aaargh_normal_macroman/Aaargh-webfont.svg#aaarghnormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'aaarghnormal';
+  src: url('/fonts/aaargh_normal_macroman/Aaargh-webfont.eot');
+  src: url('/fonts/aaargh_normal_macroman/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/aaargh_normal_macroman/Aaargh-webfont.woff') format('woff'),
+       url('/fonts/aaargh_normal_macroman/Aaargh-webfont.ttf') format('truetype'),
+       url('/fonts/aaargh_normal_macroman/Aaargh-webfont.svg#aaarghnormal') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face{
+  font-family:'EngraversGothicBT'; /*sans serif*/
+  src:  url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.eot');
+  src: url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.eot') format('embedded-opentype'),
+       url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.woff2') format('woff2'),
+       url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.woff') format('woff'),
+       url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.ttf') format('truetype'),
+       url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@media (min-width: 768px) {
+  
+}
 
 body {
   background: url(/assets/bg_pattern.svg);
@@ -40,6 +54,38 @@ body {
 }
 .content--mailer {
   display: inline-block;
+  color: #f0f0f0;
+}
+
+.content--mailer:hover a {
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.content--mailer a {
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-color: #f0f0f0;
+}
+
+@keyframes make-awsome {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.content--mailer a:hover {
+  animation: make-awsome 3s .5s ease infinite;
+
+  background: -moz-linear-gradient(-45deg, #0000ff 0%, #ff00ff 100%);
+  background: -webkit-linear-gradient(-45deg, #0000ff 0%,#ff00ff 100%);
+  background: linear-gradient(135deg, #0000ff 0%,#ff00ff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  /*
+  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,.5) 50%, rgba(0,0,0,1));
+	-webkit-mask-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,.5) 50%, rgba(0,0,0,1));
+  */
 }
 
 header {
