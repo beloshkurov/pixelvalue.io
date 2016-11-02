@@ -27,13 +27,63 @@ html, body {
   font-style: normal;
 }
 
-@media (min-width: 768px) {
-  
+body {
+  background: url('/assets/bg_pattern.svg');
+  overflow: hidden;
 }
 
-body {
-  background: url(/assets/bg_pattern.svg);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 2.6rem;
+  background: rgba(0,0,0,0.4);
+  border-radius: 0 0 2px 0;
+}
+
+.logo--text {
+  display: none;
+}
+
+.logo--container {
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  margin: 0.3rem;
+  max-width: 2rem;
+}
+
+.logo--container__img {
+  height: 2rem;
+  max-width: 3rem;
+  position: absolute;
+}
+
+.cnvs {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+}
+
+.pixel {
+  backface-visibility: hidden;
+  transition: 1s transform;
+}
+
+.pixel:hover, .rotate {
+  transform: rotateY(180deg);
+}
+
+.content--description {
+  text-align: center;
 }
 
 .content {
@@ -68,17 +118,17 @@ body {
   background-color: #f0f0f0;
 }
 
-@keyframes make-awsome {
+@keyframes make-awesome {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 .content--mailer a:hover {
-  animation: make-awsome 3s .5s ease infinite;
+  animation: make-awesome 3s .5s ease infinite;
 
-  background: -moz-linear-gradient(-45deg, #0000ff 0%, #ff00ff 100%);
-  background: -webkit-linear-gradient(-45deg, #0000ff 0%,#ff00ff 100%);
-  background: linear-gradient(135deg, #0000ff 0%,#ff00ff 100%);
+  background: -moz-linear-gradient(-45deg, #ff00ff 0%, #0000ff 100%);
+  background: -webkit-linear-gradient(-45deg, #ff00ff 0%,#0000ff 100%);
+  background: linear-gradient(135deg, #ff00ff 0%,#0000ff 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -88,21 +138,6 @@ body {
   */
 }
 
-header {
-  width: 100%;
-  height: 95px;
-  opacity: 0.8;
-  background: #0c0c0c;
-  border-bottom: 1px solid #bcbcbc;
-  /*border-bottom: 3px solid #5486e2;
-  -webkit-border-image: -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
-  border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);*/
-  border-image-slice: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
 
 .headroom {
     will-change: transform;
@@ -118,6 +153,7 @@ header {
 footer {
   width: 100%;
 }
+
 .footer--copyright {
   font-family: monospace;
   font-size: 0.5rem;
@@ -125,14 +161,59 @@ footer {
   margin-right: 2rem;
 }
 
+@media only screen and (min-width: 40em) {
+  header {
+    width: 100%;
+    background: #0c0c0c;
+    border-bottom: 1px solid #bcbcbc;
+    /*border-bottom: 3px solid #5486e2;
+    -webkit-border-image: -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);*/
+    border-image-slice: 1;
+  }
 
-.logo {
-  display: inline-block;
-  margin-left: 50px;
-  margin-top: 10px;
-  width: 200px;
-  height: 75px;
-  background: url('/assets/logo pixelvalue_black.svg') no-repeat;
-  background-position: 0 0;
-  background-size: 100% 100%;
+  .logo {
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 12rem;
+    height: 5rem;
+    border-radius: none;
+    background: transparent;
+    /*
+    background: url('/assets/logo-pixel_value-final.svg') no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    */
+  }
+  .logo--text {
+    float: left;
+    display: inline-block;
+    font-size: 2rem;
+    width: 6rem;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    font-family: "EngraversGothicBT", sans-serif;
+    padding-left: 20px;
+  }
+
+  .logo--text__text-top {
+    display: block;
+    letter-spacing: 4px;
+  }
+
+  .logo--text__text-bottom {
+    display: block;
+    letter-spacing: 2px;
+  }
+
+  .logo--container {
+      margin-top: 0.55rem;
+      height: 3.30rem;
+      max-width: 3rem;
+      margin-left: 0.5rem;
+  }
+
+  .logo--container__img {
+      height: 3.30rem;
+  }
 }

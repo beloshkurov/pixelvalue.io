@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="260px" height="260px" viewBox="0 0 120 150">
+  <defs><rect id="r0" width="30" height="30"></rect></defs>
+  <g>
+    <use xlink:href="#r0" fill="#ec6535" x="0" y="0"></use>
+    <use xlink:href="#r0" fill="#b526e6" x="30" y="0"></use>
+    <use xlink:href="#r0" fill="#425bd0" x="60" y="0"></use>
+    <use xlink:href="#r0" fill="#7ec8e2" x="90" y="0"></use>
+    <use xlink:href="#r0" fill="#f3e80a" x="0" y="30"></use>
+    <use xlink:href="#r0" fill="#68bf45" x="90" y="30"></use>
+    <use xlink:href="#r0" fill="#50d070" x="0" y="60"></use>
+    <use xlink:href="#r0" fill="#f9dc39" x="90" y="60"></use>
+    <use xlink:href="#r0" fill="#64a8de" x="0" y="90"></use>
+    <use xlink:href="#r0" fill="#4444dc" x="30" y="90"></use>
+    <use xlink:href="#r0" fill="#b72e88" x="60" y="90"></use>
+    <use xlink:href="#r0" fill="#e84141" x="90" y="90"></use>
+    <use xlink:href="#r0" fill="#8200ff" x="0" y="120"></use>
+  </g>
+</svg>
