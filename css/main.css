@@ -102,42 +102,74 @@ header {
   font-size: 5rem;
   text-align: center;
 }
-.content--mailer {
-  display: inline-block;
-  color: #f0f0f0;
+
+@-webkit-keyframes make-awesome {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes make-awesome {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-.content--mailer:hover a {
-  background-clip: text;
-  text-fill-color: transparent;
+
+.content--mailer {
+  display: inline-block;
+  position: relative;;
 }
 
 .content--mailer a {
-  -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  background-color: #f0f0f0;
+  text-decoration: none;
+  display: inline-block;
 }
 
-@keyframes make-awesome {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
 .content--mailer a:hover {
-  animation: make-awesome 3s .5s ease infinite;
-
-  background: -moz-linear-gradient(-45deg, #ff00ff 0%, #0000ff 100%);
-  background: -webkit-linear-gradient(-45deg, #ff00ff 0%,#0000ff 100%);
-  background: linear-gradient(135deg, #ff00ff 0%,#0000ff 100%);
-  background-size: 200% 200%;
+  animation: make-awesome 1.7s linear infinite reverse;
+  background: -moz-llinear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: -webkit-linear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: linear-gradient(270deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background-size: 350% 100%;
+  background-position:0% 50%;
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
   /*
   -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,.5) 50%, rgba(0,0,0,1));
 	-webkit-mask-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,.5) 50%, rgba(0,0,0,1));
   */
 }
 
+.content--mailer::after {
+    width: 100%;
+    height: 1px;
+    background: #ff00ff;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+}
+
+.content--mailer:hover::after {
+  content: '';
+  background: -moz-llinear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: -webkit-linear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: linear-gradient(270deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background-size: 350% 100%;
+  background-position: 0% 50%;
+  -webkit-animation: make-awesome 1.7s linear infinite reverse;
+  animation: make-awesome 1.7s linear infinite reverse;
+}
 
 .headroom {
     will-change: transform;

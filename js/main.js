@@ -159,11 +159,9 @@ const loader = e => {
   if (img) {
     img.remove()
   }
-  console.log('DOMContentLoaded')
   recreateLogos();
 }
 
-console.log(document.readyState);
 
 if ( document.readyState === "interactive" || document.readyState === "complete") {
   loader()
@@ -178,4 +176,30 @@ document.addEventListener("visibilitychange", function () {
 	document.visibilityState === 'visible' && setTimeout(() => { notify().then(() => { recreateLogos() }) }, 1000)
 })
 
+if (typeof console !== 'undefined' && typeof console.log === 'function') {
+  (function (colorsArr) {
+    let colors = [],
+          text = '%c\u2001%c\u2001%c\u2001%c\u2001\n' +
+          '%c\u2001%c\u2001%c\u2001%c\u2001$c  PixelValue\n' +
+          '%c\u2001%c\u2001%c\u2001%c\u2001$c   made with \u2764\n' +
+          '%c\u2001%c\u2001%c\u2001%c\u2001$c       \uD83D\uDC41\n' +
+          '%c\u2001';
+
+    let css = [], idx;
+    let styles = ['font-size: 1.3em;', ''];
+
+    for (const c of colorsArr) {
+      colors.push(c ? '#' + c : 'transparent');
+    }
+
+    css = colors.map(c => `background-color: ${c}; font-size: 2em; line-height: 1em;`)
+
+    while((idx = text.indexOf('$c')) !== -1) {
+        css.splice(text.substring(0, idx).match(/%c/g).length, 0, styles.shift());
+        text = text.replace('$c', '%c');
+    }
+    console.log(...[
+      text, ...css]);
+  })(finalColors)
+}
 }())
