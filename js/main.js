@@ -182,11 +182,32 @@ if (typeof console !== 'undefined' && typeof console.log === 'function') {
           text = '%c\u2001%c\u2001%c\u2001%c\u2001\n' +
           '%c\u2001%c\u2001%c\u2001%c\u2001$c  PixelValue\n' +
           '%c\u2001%c\u2001%c\u2001%c\u2001$c   made with \u2764\n' +
-          '%c\u2001%c\u2001%c\u2001%c\u2001$c       \uD83D\uDC41\n' +
+          '%c\u2001%c\u2001%c\u2001%c\u2001$c    \uD83D\uDC41\n' +
           '%c\u2001';
 
     let css = [], idx;
-    let styles = ['font-size: 1.3em;', ''];
+
+    let getURL = function (ga) {
+      const base = 'https://www.google-analytics.com/collect?';
+      let values = {
+        'v': '1',
+        'tid': 'UA-85133044-1',
+        't': 'event',
+        'ec': 'console',
+        'ea': 'open'/*,
+        'z': Math.random().toFixed(10).substring(2)*/
+      };
+
+      try {
+        values['cid'] = ga.getAll()[0].get('clientId');
+      } catch (e) {}
+
+      return base + Object.keys(values).map( k => `${k}=${values[k]}`).join('&');
+    }
+    console.log(getURL(ga))
+    let styles = ['font-size: 1.3em;', '', 'font-size: 1.8em; background-image: url(https://goo.gl/yfdLjh); background-image: url(' + getURL(ga) + ')'];
+
+
 
     for (const c of colorsArr) {
       colors.push(c ? '#' + c : 'transparent');
