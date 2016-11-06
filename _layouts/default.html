@@ -18,6 +18,26 @@
 
     <link href="/css/main.css"  rel="stylesheet"/>
 
+    <!-- this font loading polifill inculdes polifill for promises too-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.5/fontfaceobserver.js"></script>
+    <script>
+      (function () {
+        (new FontFaceObserver('aaarghnormal')).load().then(() => {
+          document.documentElement.className += " font-aaarghnormal-loaded";
+        });
+        (new FontFaceObserver('EngraversGothicBT')).load().then(() => {
+          document.documentElement.className += " font-EngraversGothicBT-loaded";
+        })
+      }())
+    </script>
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="content">
+    {{ content }}
+    </div>
+    {% include footer.html %}
+    {% include metrics.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     <script src="https://unpkg.com/headroom.js"></script>
     <script>
@@ -55,13 +75,5 @@
 
       })()
     </script>
-  </head>
-  <body>
-    {% include header.html %}
-    <div class="content">
-    {{ content }}
-    </div>
-    {% include footer.html %}
-    {% include metrics.html %}
   </body>
 </html>

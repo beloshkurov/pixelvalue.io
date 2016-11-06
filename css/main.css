@@ -30,6 +30,8 @@ html, body {
 body {
   background: url('/assets/bg_pattern.svg');
   overflow: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 header {
@@ -95,6 +97,10 @@ header {
   align-items: center;
   align-content: center;
   flex-direction: column;
+  font-family: sans-serif;
+}
+
+.font-aaarghnormal-loaded .content {
   font-family: "aaarghnormal", sans-serif;
 }
 
@@ -224,8 +230,12 @@ footer {
     width: 6rem;
     text-transform: uppercase;
     color: #f0f0f0;
-    font-family: "EngraversGothicBT", sans-serif;
+    font-family: sans-serif;
     padding-left: 20px;
+  }
+
+  .font-EngraversGothicBT-loaded .logo-text {
+    font-family: "EngraversGothicBT", sans-serif;
   }
 
   .logo--text__text-top {
