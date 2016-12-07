@@ -1,13 +1,27 @@
-<header>
-  <a href="#" class="logo">
-    <div class="logo--text">
-      <span class="logo--text__text-top">Pixel</span>
-      <span class="logo--text__text-bottom">Value</span>
-    </div>
-    <div id="bucket" class="logo--container"><img class="logo--container__img" src="/assets/Logo-static-fixed.svg"/></div>
-  </a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.3.6/svg.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
-  <script src="/js/main.js" type="text/babel"></script>
+<header class="fill-bloc-top-edge header-sticky sticky-nav bgc-smoky-black d-bloc clearfix" id="bloc-0">
+  <div class="container">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="logo" href="/">
+          <!--<img src="img/logo-pixel_value-final.svg" height="80" />-->
+          <div class="logo--text">
+            <span class="logo--text__text-top">Pixel</span>
+            <span class="logo--text__text-bottom">Value</span>
+          </div>
+          <div id="bucket" class="logo--container"><img class="logo--container__img" src="/assets/Logo-static-fixed.svg"/></div>
+        </a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1 collapse">
+				<ul class="site-navigation nav navbar-nav pull-right">
+        {% assign posts = site.posts | sort: 'date'  %}
+        {% for post in posts %}
+          <li><a href="#{{ post.link }}" class="ltc-white">{{ post.link }}</a></li>
+        {% endfor %}
+				</ul>
+			</div>
+		</nav>
+	</div>
 </header>

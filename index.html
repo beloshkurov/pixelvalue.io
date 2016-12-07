@@ -1,10 +1,8 @@
 ---
-  layout: default
+  layout: home
 ---
-<div class="content--center">
-Coming Soon
-</div>
-<div class="content--description">
-  Please be patient, we will be launched soon!
-  <div class="content--mailer"></div>
-</div>
+
+{% assign posts = site.posts | sort: 'date'  %}
+{% for post in posts %}
+    {{ post.content }}
+{% endfor %}

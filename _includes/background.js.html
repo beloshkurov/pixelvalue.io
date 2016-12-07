@@ -1,0 +1,37 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+<!--<script src="https://unpkg.com/headroom.js"></script>-->
+<script>
+  (function () {
+    var triangilifier, headroom;
+
+    function draw(container) {
+      var imagePath = 'url(\'' + triangilifier.png() + '\')';
+      container && (container.style.backgroundImage = imagePath);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      triangilifier = Trianglify({
+          width: window.innerWidth,
+          height: window.innerHeight,
+          x_colors: ["#023858", "#045a8d", "#0570b0", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
+          y_colors: "match_x"
+      });
+
+      //headroom = new Headroom(document.querySelector('header'), { tolerance: 100 });
+      //headroom.init()
+      draw(document.querySelector('.subscribe-block'))
+
+      /*;(function generateMail() {
+        ML="=mvi\".ae:/pf>nuo@t<hxl r";
+        MI="B6FCG7;04163EA?83=;?@:3D7E26E>753?4<3=;?@:3D7E26E>753?B96<";
+        OT="";
+        for(j=0;j<MI.length;j++){
+          OT+=ML.charAt(MI.charCodeAt(j)-48);
+        }
+        document.querySelector('.content--mailer').innerHTML = OT;
+      }())*/
+    })
+
+
+  })()
+</script>
