@@ -1,0 +1,95 @@
+
+
+.hero-bloc-text{
+  font-size:25px;
+  font-family: Lustria;
+}
+
+.service {
+  font-family: Lato;
+  font-weight: 300;
+}
+
+.service li p {
+  display: inline-block;
+}
+
+
+@media (max-width: 767px) {
+  .service-header{
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Domine;
+  }
+
+  .service-description {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Lato;
+  }
+
+  .service--web li:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .sticky-nav.sticky {
+    box-shadow: none!important;
+  }
+
+  .sticky .nav > li {
+    background-color: rgb(50, 50, 50);
+  }
+
+  .sticky .collapsing .nav .active,
+  .sticky .collapse .nav .active {
+    border: initial;
+  }
+  .sticky .collapse .nav .active a {
+    border-left: 2px solid #3988ff;
+  }
+
+}
+
+@media (max-width: 420px){
+	.blocs-team-avatar{
+		max-width:280px;
+	}
+	.blocs-team-header{
+		text-align:center;
+	}
+	.blocs-team-details{
+		text-align:center;
+	}
+	.blocs-team-first-social{
+		margin-left:41%;
+	}
+	.service--plate{
+	}
+
+	/* Mobile Row Margin Offsets */
+	.voffset-lg-xs{
+		margin-top:80px;
+	}
+	/* = Text Mobile Alignment Classes
+	-------------------------------------------------------------- */
+	.text-left-xs{
+		text-align:left;
+	}
+	.text-center-xs{
+		text-align:center;
+	}
+
+  .subscribe-block {
+    padding-top: 20px!important;
+  }
+}
+
+@media (max-width: 767px) and (orientation:landscape) {
+
+}

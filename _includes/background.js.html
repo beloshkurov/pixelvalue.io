@@ -5,21 +5,32 @@
     var triangilifier, headroom;
 
     function draw(container) {
-      var imagePath = 'url(\'' + triangilifier.png() + '\')';
-      container && (container.style.backgroundImage = imagePath);
+      if (container) {
+        var imagePath = 'url(\'' + triangilifier.png() + '\')';
+        container.style.backgroundImage = imagePath;
+        container.classList.add('triagilified')
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
       triangilifier = Trianglify({
           width: window.innerWidth,
           height: window.innerHeight,
-          x_colors: ["#023858", "#045a8d", "#0570b0", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
+          x_colors: ["#023858", "#045a8d", "#0570b0", /*"#a6bddb",*/ "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
           y_colors: "match_x"
       });
 
       //headroom = new Headroom(document.querySelector('header'), { tolerance: 100 });
       //headroom.init()
-      draw(document.querySelector('.subscribe-block'))
+      ['.subscribe-block', '.contacts .fade-bg'].forEach(function (s) {
+        var e  = document.querySelectorAll(s);
+        if (e.length) {
+          Array.prototype.slice.call(e).forEach(function (c) {
+            draw(c)
+          })
+        }
+      })
+
 
       /*;(function generateMail() {
         ML="=mvi\".ae:/pf>nuo@t<hxl r";
@@ -30,6 +41,30 @@
         }
         document.querySelector('.content--mailer').innerHTML = OT;
       }())*/
+
+      /*var links = [];
+      {% assign posts = site.posts | sort: 'date'  %}
+      {% for post in posts %}links.push('{{ post.link }}');
+      {% endfor %}
+
+      function hashMonitor(e) {
+        var hash = window.location.hash.replace('#', ''),
+            match = links.indexOf(hash),
+            active = document.querySelector('.nav a.active');
+
+        if (active) {
+          active.classList.remove('active')
+        }
+
+        if (match !== -1) {
+          active = document.querySelector('.nav a[href*=' + hash + ']')
+          if (active) {
+            active.classList.add('active')
+          }
+        }
+      }
+      window.addEventListener('hashchange', hashMonitor)
+*/
     })
 
 

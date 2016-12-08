@@ -1,3 +1,6 @@
+@import "mobile.css";
+@import "tablet.css";
+
 @font-face{
   font-family:'EngraversGothicBT'; /*sans serif*/
   src:  url('/fonts/engravers-gothic-bt/EvgraversGothicBTW.eot');
@@ -264,10 +267,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 /* Bloc text custom styling */
 
-#bloc-1 h1{
-	font-family: Lato;
-	font-weight: 500;
-}
+
 #bloc-1 h3{
 	font-family: Lato;
 	font-weight: 300;
@@ -288,7 +288,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-3 p{
 	font-family: Lato;
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 18px;
 }
 #bloc-4 h1{
 	font-weight: 500;
@@ -297,66 +297,14 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-4 p{
 	font-family: Lato;
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 18px;
 }
 #bloc-5 h1{
 	font-weight: 500;
 	font-family: Lustria;
 }
-#bloc-6 h2{
-	font-weight: 400;
-	font-family: Domine;
-}
-#bloc-6 p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 48.57143020629883px;
-}
-#bloc-7 h2{
-	font-weight: 400;
-	font-family: Domine;
-}
-#bloc-7 p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 48.57143020629883px;
-}
-#bloc-8 h2{
-	font-weight: 400;
-	font-family: Domine;
-}
-#bloc-8 p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 48.57143020629883px;
-}
-#bloc-9 h3{
-	font-family: Domine;
-	font-size: 30px;
-}
-#bloc-9 p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 24px;
-}
-#bloc-9 p{
-	font-size: 24px;
-	font-family: Lato;
-	font-weight: 300;
-}
-#bloc-10 h3{
-	font-family: Domine;
-	font-size: 30px;
-}
-#bloc-10 p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 24.71428680419922px;
-	line-height: 38.57143020629883px;
-}
+
+
 
 
 /* = NavBar
@@ -389,7 +337,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 .nav > li{
 	float:left;
-	margin-top:4px;
+	margin-top:7px;
 	font-size:16px;
 }
 .navbar-nav .open .dropdown-menu > li > a{
@@ -479,6 +427,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 nav .caret{
 	margin: 0 5px;
 }
+
+.sticky .nav .active{
+  border-bottom: 2px solid #3988ff;
+}
+
+
 /* Dropdown Menus SubMenu */
 	.dropdown-menu .dropdown-menu{
 	top:-8px;
@@ -522,8 +476,8 @@ nav .caret{
 	margin-bottom:20px;
 }
 .mg-lg{
-	margin-top:10px;
-	margin-bottom:40px;
+	/* margin-top:10px; */
+	/* margin-bottom:40px; */
 }
 img.mg-sm,img.mg-md,img.mg-lg{
 	margin-top: 0;
@@ -732,10 +686,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .container{
 	max-width:1170px;
 }
-.hero-bloc-text{
-	font-size:55px;
-	font-family: Lustria!important;
-}
+
 .hero-bloc-text-sub{
 	font-size:36px;
 }
@@ -745,13 +696,16 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .fade-bg{
 	overflow:hidden;
-	background-color:rgba(37,49,98,0.8);
-	color:rgba(1,1,1,0.0)!important;
+	background-color: rgba(0,107,158,0.8);
 	border-style:none;
 	background:linear-gradient(270deg, rgba(8,119,143,0.4), rgba(65,108,168,0.7));
 	float:none;
 	text-shadow:px;
 }
+.triagilified.fade-bg h3 {
+  font-weight: 300;
+}
+
 .blocs-team-title{
 	color:#1d1d1d;
 	font-size:50px;
@@ -775,17 +729,17 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .blocs-green-button:hover{
 	background-color:#1aae91;
 }
-.service--name{
-}
-.service--{
+
+.content-decoration {
+	padding: 20px 10px;
 }
 .service--plate{
 	background-color:rgba(0,107,158,0.8);
-	padding:40px 40px 40px 40px;
 }
+
 .service--icon{
 	height:64px;
-	padding-top: 8px;
+	/* padding-top: 8px; */
 }
 .service--list-item{
 	border-style:solid;
@@ -798,9 +752,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	margin-top: 8px;
 }
 .subscribe-block{
-	background:linear-gradient(337deg, #00609C, #009DFE);
+	background: linear-gradient(337deg, #00609C, #009DFE);
 }
-.service--mobile-list .text-left {
+.service-mobile--list .text-left {
 	padding-top: 8px;
 }
 
@@ -808,8 +762,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	margin: auto;
 }
 
-.langing-bloc  {
+.landing-bloc  {
 	padding: 0;
+}
+
+@media (min-width: 768px) {
+  .landing-bloc  {
+  	height: 699px;
+  }
 }
 
 /* = Colour
@@ -981,13 +941,13 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     .nav > li{
         margin-top: 0;
         border-bottom:1px solid rgba(0,0,0,.1);
-        background:rgba(0,0,0,.05);
+        /* background:rgba(0,0,0,.05); */
         text-align: left;
         padding-left:15px;
         width:100%;
     }
     .nav > li:hover{
-        background:rgba(0,0,0,.08);
+        /* background:rgba(0,0,0,.08); */
     }
     .dropdown .dropdown a .caret{
         float: none;
@@ -1038,7 +998,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   padding-right: 10px;
     }
     .bloc-xxl,.bloc-xl,.bloc-lg{
-        padding: 40px 0;
+        padding: 0px 0;
     }
     .bloc-sm,.bloc-md{
         padding-left: 0;
@@ -1080,37 +1040,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     }
 }
 
-@media (max-width: 420px){
-	.blocs-team-avatar{
-		max-width:280px;
-	}
-	.blocs-team-header{
-		text-align:center;
-	}
-	.blocs-team-details{
-		text-align:center;
-	}
-	.blocs-team-first-social{
-		margin-left:41%;
-	}
-	.service--plate{
-	}
 
-	/* Mobile Row Margin Offsets */
-	.voffset-lg-xs{
-		margin-top:80px;
-	}
-	/* = Text Mobile Alignment Classes
-	-------------------------------------------------------------- */
-	.text-left-xs{
-		text-align:left;
-	}
-	.text-center-xs{
-		text-align:center;
-	}
-}
-
-/* HO-HO */
 
 .logo {
   display: inline-block;
@@ -1120,6 +1050,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
   border-radius: 0 0 2px 0;
 }
 
+
 .logo--text {
   display: none;
 }
@@ -1127,15 +1058,13 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .logo--container {
   display: inline-block;
   position: relative;
-  height: 2rem;
-  margin: 0.3rem;
-  max-width: 2rem;
+  height: 2em;
+  margin: 1em 0.3em;
+  max-width: 2.5em;
 }
 
 .logo--container__img {
-  height: 2rem;
-  max-width: 3rem;
-  position: absolute;
+  max-width: 2em;
 }
 
 
@@ -1242,24 +1171,24 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .footer--copyright {
   font-family: monospace;
-  font-size: 0.7rem;
+  font-size: 0.7em;
   float: right;
-  margin-right: 2rem;
+  margin-right: 2em;
 }
 
-@media only screen and (min-width: 40em) {
-  header {
+
+@media only screen and (min-width: 420px) {
+  /*header {
     width: 100%;
     background: #0c0c0c;
     border-bottom: 1px solid #bcbcbc;
-    /*border-bottom: 3px solid #5486e2;
+    border-bottom: 3px solid #5486e2;
     -webkit-border-image: -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
-    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);*/
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
     border-image-slice: 1;
-  }
+  }*/
 
   .logo {
-    margin-left: 50px;
     margin-top: 10px;
     width: 12rem;
     height: 5rem;
@@ -1309,4 +1238,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .btn-medium-jungle-green.btn.btn-sq {
 	visibility: hidden;
+}
+
+
+.panel.fade-bg {
+  color: #ffffff
 }

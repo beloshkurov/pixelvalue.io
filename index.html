@@ -4,5 +4,7 @@
 
 {% assign posts = site.posts | sort: 'date'  %}
 {% for post in posts %}
+  <article data-post-id="{{post.link}}">
     {{ post.content }}
+  </article>
 {% endfor %}
