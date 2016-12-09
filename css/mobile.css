@@ -1,3 +1,34 @@
+/* Setting default height of landing while loading, to spread on whole height */
+@media (max-width: 360px) {
+  .landing-bloc.bloc  {
+  	height: 568px;
+  }
+}
+
+@media (max-width: 375px) {
+  .landing-bloc.bloc  {
+  	height: 667px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 414px) {
+  .landing-bloc.bloc  {
+  	height: 736px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 1000px) {
+  .landing-bloc.bloc  {
+  	height: 1000px;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-module.bloc {
+    padding-top: 60px;
+  }
+}
+/* end of landing height */
 
 
 .hero-bloc-text{
@@ -15,11 +46,96 @@
 }
 
 
+.cookie-policy {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: hsla(0, 53%, 58%, 0.9);
+  padding: 1.2em 2em;
+}
+
+.cookie-policy div {
+  display: inline-block;
+}
+.cookie-policy--buttons {
+  width: 100%;
+}
+.cookie-policy--agree {
+  text-align: right;
+}
+.cookie-policy--close-icon {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+}
+
+
+.bg-web-services.bloc {
+	background-image:url('../assets/web-services-bg-320.jpg');
+}
+
+.bg-who-we-are.bloc {
+	background-image:url('../assets/who-we-are-bg-320.jpg');
+}
+
+.bg-vision.bloc {
+	background-image: url('../assets/vision-bg-720.jpg');
+	background-size: contain;
+}
+
+.bg-landing.bloc {
+	background-image: url('../assets/landing-0-bg-720.jpg');
+}
+
+.bg-business-solutions.bloc {
+	background-image:url('../assets/business-solutions-bg-320.jpg');
+}
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+
+  /* Small screen, retina, stuff to override above media query */
+  .bg-web-services.bloc {
+  	background-image:url('../assets/web-services-bg-720.jpg');
+  }
+
+  .bg-who-we-are.bloc {
+  	background-image:url('../assets/who-we-are-bg-720.jpg');
+  }
+
+  .bg-vision.bloc {
+  	background-image:url('../assets/vision-bg-720.jpg');
+  }
+
+  .bg-landing.bloc {
+  	background-image: url('../assets/landing-0-bg-720.jpg');
+  }
+
+  .bg-business-solutions.bloc {
+  	background-image:url('../assets/business-solutions-bg-720.jpg');
+  }
+}
+
+@media (max-width: 767px) {
+  .subscribe-block.bloc {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
 @media (max-width: 767px) {
   .service-header{
     padding-left: 20px!important;
     padding-right: 20px!important;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     font-family: Domine;
   }
@@ -88,8 +204,4 @@
   .subscribe-block {
     padding-top: 20px!important;
   }
-}
-
-@media (max-width: 767px) and (orientation:landscape) {
-
 }

@@ -675,6 +675,7 @@ iframe{
 
 .blocsapp-device-mbp{
 	background-image:url("../assets/Apple-Macbook-Pro.png");
+	/* margin: 0 20px; */
 }
 
 /* = Custom Styling
@@ -781,7 +782,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	background-color:#080808;
 }
 .bgc-white{
-	background-color:#ffffff;
+	/* background-color:#ffffff; */
 }
 .bgc-dark-jungle-green{
 	background-color:#1F1F1F;
@@ -839,34 +840,39 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .bg-Canada-location{
 	background-image:url("../assets/Canada-location.jpg");
 }
-.bg-shutterstock-478732861-2048{
-	background-image:url("../assets/shutterstock_478732861-2048.jpg");
-}
-.bg-shutterstock-485402395-2048{
-	background-image:url("../assets/shutterstock_485402395-2048.jpg");
-}
-.bg-Space-Wallpaper-1920x1080{
-	background-image:url('../assets/Space-Wallpaper-1920x1080.jpg');
-}
-.bg-home-slide-image3{
-	background-image:url('../assets/home_slide_image3.jpg');
-}
 
-.bg-who-we-are {
-	background-image:url('../assets/404281-svetik.jpg');
-}
-
-.bg-real-northern-lights-wallpaper-1{
-	background-image:url('../assets/real-northern-lights-wallpaper-1.jpg');
-}
-.bg-Kyiv-location-2{
+.bg-Kyiv-location{
 	background-image:url('../assets/Kyiv-location-2.jpg');
 }
-.bg-shutterstock-485402395-2048{
-	background-image:url('../assets/shutterstock_485402395-2048.jpg');
-}
-.bg-shutterstock-478732861-2048{
-	background-image:url('../assets/shutterstock_478732861-2048.jpg');
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1200px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1200px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1200px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1200px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1200px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1200px) {
+
+  .bg-web-services.bloc {
+  	background-image:url('../assets/web-services-bg.jpg');
+  }
+
+  .bg-who-we-are.bloc {
+  	background-image:url('../assets/who-we-are-bg.jpg');
+  }
+
+  .bg-vision.bloc {
+  	background-image:url('../assets/vision-bg.jpg');
+  }
+
+  .bg-landing.bloc {
+  	background-image: url('../assets/landing-0-bg.jpg');
+  }
+
+  .bg-business-solutions.bloc {
+  	background-image:url('../assets/business-solutions-bg.jpg');
+  }
 }
 
 
@@ -889,7 +895,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 @media (max-width: 768px)
 {
     .container{width:100%;}
-    .b-parallax{background-attachment:scroll;}
+    .b-parallax{/* background-attachment:scroll; */}
     .page-container, #hero-bloc{overflow-x: hidden;position: relative;} /* Prevent unwanted side scroll on mobile */
 }
 
@@ -915,13 +921,13 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     .bloc{
         padding-left: 0;
         padding-right: 0;
-        -webkit-background-size: auto 200%;
+        /* -webkit-background-size: auto 200%; */
         -moz-background-size: auto 200%;
         -o-background-size: auto 200%;
-        background-size: auto 200%;
+        /* background-size: auto 200%; */
     }
     .b-parallax{
-        background-attachment:scroll;
+        /* background-attachment:scroll; */
     }
     .navbar .nav{
         padding-top: 0;
@@ -1243,4 +1249,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .panel.fade-bg {
   color: #ffffff
+}
+fff
 }

@@ -8,4 +8,80 @@
   .sticky-nav.sticky {
     background-color: black;
   }
+
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .bg-web-services.bloc {
+  	background-image:url('../assets/web-services-bg-720.jpg');
+  }
+
+  .bg-who-we-are.bloc {
+  	background-image: url('../assets/who-we-are-bg-1024.jpg');
+  }
+
+  .bg-vision.bloc {
+  	background-image:url('../assets/vision-bg-1024.jpg');
+  }
+
+  .bg-landing.bloc {
+  	background-image:url('../assets/landing-0-bg-720.jpg');
+  }
+
+  .bg-business-solutions.bloc {
+  	background-image:url('../assets/business-solutions-bg-720.jpg');
+  }
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 700px) {
+
+  /* Medium screen, retina, stuff to override above media query */
+  .bg-web-services.bloc {
+  	background-image:url('../assets/web-services-bg-1024.jpg');
+  }
+
+  .bg-who-we-are.bloc {
+  	background-image:url('../assets/who-we-are-bg-1024.jpg');
+  }
+
+  .bg-vision.bloc {
+  	background-image:url('../assets/vision-bg-1024.jpg');
+  }
+
+  .bg-landing.bloc {
+  	background-image:url('../assets/landing-0-bg-1024.jpg');
+  }
+
+  .bg-business-solutions.bloc {
+  	background-image:url('../assets/business-solutions-bg-1024.jpg');
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .bg-web-services{
+  	background-image:url('../assets/web-services-bg-1024.jpg');
+  }
+
+  .bg-who-we-are {
+  	background-image:url('../assets/who-we-are-bg-1024.jpg');
+  }
+
+  .bg-vision{
+  	background-image:url('../assets/vision-bg-1024.jpg');
+  }
+
+  .bg-landing.landing-bloc {
+  	background-image:url('../assets/landing-0-bg-1024.jpg');
+  }
+
+  .bg-business-solutions{
+  	background-image:url('../assets/business-solutions-bg-1024.jpg');
+  }
 }

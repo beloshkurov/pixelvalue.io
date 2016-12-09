@@ -1,5 +1,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-<!--<script src="https://unpkg.com/headroom.js"></script>-->
 <script>
   (function () {
     var triangilifier, headroom;
@@ -20,9 +19,7 @@
           y_colors: "match_x"
       });
 
-      //headroom = new Headroom(document.querySelector('header'), { tolerance: 100 });
-      //headroom.init()
-      ['.subscribe-block', '.contacts .fade-bg'].forEach(function (s) {
+      ['.subscribe-block'].forEach(function (s) {
         var e  = document.querySelectorAll(s);
         if (e.length) {
           Array.prototype.slice.call(e).forEach(function (c) {
@@ -32,41 +29,7 @@
       })
 
 
-      /*;(function generateMail() {
-        ML="=mvi\".ae:/pf>nuo@t<hxl r";
-        MI="B6FCG7;04163EA?83=;?@:3D7E26E>753?4<3=;?@:3D7E26E>753?B96<";
-        OT="";
-        for(j=0;j<MI.length;j++){
-          OT+=ML.charAt(MI.charCodeAt(j)-48);
-        }
-        document.querySelector('.content--mailer').innerHTML = OT;
-      }())*/
-
-      /*var links = [];
-      {% assign posts = site.posts | sort: 'date'  %}
-      {% for post in posts %}links.push('{{ post.link }}');
-      {% endfor %}
-
-      function hashMonitor(e) {
-        var hash = window.location.hash.replace('#', ''),
-            match = links.indexOf(hash),
-            active = document.querySelector('.nav a.active');
-
-        if (active) {
-          active.classList.remove('active')
-        }
-
-        if (match !== -1) {
-          active = document.querySelector('.nav a[href*=' + hash + ']')
-          if (active) {
-            active.classList.add('active')
-          }
-        }
-      }
-      window.addEventListener('hashchange', hashMonitor)
-*/
+      
     })
-
-
   })()
 </script>
