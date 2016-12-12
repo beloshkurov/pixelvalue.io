@@ -2,6 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +17,11 @@
 
     <meta name="description" content="{{ page.description }}">
 
+    <!-- build:css -->
     <link href="/css/bootstrap.css"  rel="stylesheet"/>
     <link href="/css/font-awesome.min.css"  rel="stylesheet"/>
     <link href="/css/main.css"  rel="stylesheet"/>
+    <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lustria&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
@@ -29,14 +32,13 @@
       {% include footer.html %}
     </div>
     {% include metrics.html %}
-    {% include background.js.html %}
     {% include errortracking.js.html %}
     <!-- this font loading polyfill includes polyfill for promises also-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.5/fontfaceobserver.js"></script>
+    <script src="js/fontfaceobserver.js"></script>
     <script>
       (function () {
         let notify = (e) => {
-          console.log(e)
+          console && console.log(e)
         };
         ['EngraversGothicBT', 'Lato', 'Lustria'].forEach(n => {
           let ffo = new FontFaceObserver(n);
@@ -46,12 +48,15 @@
         })
       }())
     </script>
+    <!-- build:js -->
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/blocs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.3.6/svg.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
-    <script src="js/main.js" type="text/babel"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/trianglify.min.js"></script>
+    <script src="js/babel.min.js"></script>
+    <script src="js/main.es6" type="text/babel"></script>
     <script src="js/jquery.cookie.js"></script>
+    <!-- endbuild -->
   </body>
 </html>

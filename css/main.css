@@ -26,7 +26,14 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
 
-#page-loading-blocs-notifaction{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("../assets/pageload-spinner.gif") no-repeat center center;}
+#page-loading-blocs-notifaction{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index:100000;
+  background:#FFFFFF url("../assets/pageload-spinner.gif") no-repeat center center;
+}
 
 /* = Blocs
 -------------------------------------------------------------- */
@@ -366,11 +373,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	float:right;
 }
 
-@media (max-width: 767px)
+@media (max-width: 767px) {
 .navbar .nav {
-	padding-top: 0;
-	border-top: 1px solid rgba(0,0,0,.2);
-	float: none!important;
+  	padding-top: 0;
+  	border-top: 1px solid rgba(0,0,0,.2);
+  	float: none!important;
+  }
 }
 
 @media (min-width: 992px){
