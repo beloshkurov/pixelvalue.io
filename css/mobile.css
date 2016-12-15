@@ -45,6 +45,20 @@
   display: inline-block;
 }
 
+.contact-title a {
+  text-decoration: underline;
+  color: #f3f3f3!important;
+}
+.contact-title a:hover {
+  color: #fff!important;
+}
+
+.contacts address a {
+  color: #f3f3f3!important;
+}
+.contacts adrdess a:hover {
+  color: #fff!important;
+}
 
 .cookie-policy {
   display: none;

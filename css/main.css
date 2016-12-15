@@ -1122,21 +1122,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1200px)
 }
 
 
-.content--mailer {
-  display: inline-block;
-  position: relative;;
-}
 
-.content--mailer a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.content--mailer a:hover {
+.contact-title a:hover {
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.7);
   animation: make-awesome 1.7s linear infinite reverse;
-  background: -moz-llinear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
-  background: -webkit-linear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
-  background: linear-gradient(270deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: -moz-llinear-gradient(180deg, #3988ff, #3988ff, #fff, #fff, #3988ff, #3988ff);
+  background: -webkit-linear-gradient(180deg, #3988ff, #3988ff, #fff, #fff, #3988ff, #3988ff);
+  background: linear-gradient(270deg, #3988ff, #3988ff, #fff, #fff, #3988ff, #3988ff);
   background-size: 350% 100%;
   background-position:0% 50%;
   -webkit-background-clip: text;
@@ -1150,10 +1142,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1200px)
   */
 }
 
-.content--mailer::after {
+.contact-title::after {
     width: 100%;
     height: 1px;
-    background: #ff00ff;
+    background: #3988ff;
     position: absolute;
     bottom: 4px;
     left: 0;
@@ -1161,11 +1153,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1200px)
     transition: background 0.2s ease-in;
 }
 
-.content--mailer:hover::after {
+.contact-title:hover::after {
   content: '';
-  background: -moz-llinear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
-  background: -webkit-linear-gradient(180deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
-  background: linear-gradient(270deg, #ff00ff, #ff00ff, #0000ff, #0000ff, #ff00ff, #ff00ff);
+  background: -moz-llinear-gradient(180deg, #3988ff, #3988ff, #ffffff, #ffffff, #3988ff, #3988ff);
+  background: -webkit-linear-gradient(180deg, #3988ff, #3988ff, #fff, #fff, #3988ff, #3988ff);
+  background: linear-gradient(270deg, #3988ff, #3988ff, #fff, #fff, #3988ff, #3988ff);
   background-size: 350% 100%;
   background-position: 0% 50%;
   -webkit-animation: make-awesome 1.7s linear infinite reverse;
