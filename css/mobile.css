@@ -81,7 +81,7 @@
 
 .bg-vision.bloc {
 	background-image: url('../assets/vision-bg-720.jpg');
-	background-size: contain;
+	/*background-size: contain;*/
 }
 
 .bg-landing.bloc {
@@ -92,7 +92,9 @@
 	background-image:url('../assets/business-solutions-bg-320.jpg');
 }
 
-
+.service--plate-l {
+  background-color: inherit;
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
@@ -184,8 +186,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	}
 	.blocs-team-first-social{
 		margin-left:41%;
-	}
-	.service--plate{
 	}
 
 	/* Mobile Row Margin Offsets */
