@@ -119,7 +119,7 @@ gulp.task("js", function() {
     ]))
     .pipe(map(log))
     .pipe(concat("app.js"))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("docs/js/"))
 })
 

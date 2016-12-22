@@ -2,9 +2,393 @@
   layout: home
 ---
 
-{% assign posts = site.posts | sort: 'date'  %}
-{% for post in posts %}
-  <article data-post-id="{{post.link}}">
-    {{ post.content }}
-  </article>
-{% endfor %}
+<!-- intro -->
+<article data-post-id="intro">
+  <div class="bloc bgc-white l-bloc site-module" id="intro">
+  	<div class="container bloc-lg bloc-heading">
+  		<div class="row row-no-gutters">
+  			<div class="col-sm-12">
+  				<h1 class=" text-center hero-bloc-text tc-white tc-smoky-black text-center-xs">Who we are?</h1>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <div class="bloc bgc-white bg-who-we-are" id="bloc-3">
+  	<div class="container bloc-xl">
+  		<div class="row service--plate content-decoration">
+  			<div class="col-sm-12">
+  				<p class="tc-white mg-lg">
+  					PixelValue is outsourcing company that can help you with simple and effective solutions.
+  					Our story began with phone calls and few enthusiastic fellows
+  					who despite leaving the comfort of big IT companies
+  					wanted to help elaborating projects with their own vision.
+  				</p>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</article>
+<!-- intro END -->
+<!-- vision -->
+<article data-post-id="vision">
+  <div class="bloc bgc-white l-bloc site-module" id="vision" data-view-shift="100">
+  	<div class="container bloc-lg bloc-heading">
+  		<div class="row row-no-gutters">
+  			<div class="col-sm-12">
+  				<h1 class=" text-center hero-bloc-text tc-white tc-smoky-black text-center-xs">
+  					What is our vision?
+  				</h1>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <div class="bloc tc-white bg-vision" id="bloc-4">
+  	<div class="container bloc-xl">
+  		<div class="row service--plate-l content-decoration">
+  			<div class="col-sm-12">
+  				<p class="tc-white mg-lg">
+  					We offer design and development services. We create simple, responsive, and effective solutions for your ideas. We value time of our partners, so we can adjust to new technologies, requirements, and new industry trends. From the beginning, you will be in touch with our project manager and tech lead who will help you to find a proper solution and technology.
+  				</p>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</article>
+<!-- vision END -->
+
+<!-- services -->
+<article data-post-id="services">
+  <!-- bloc-5 -->
+  <div class="bloc bgc-white l-bloc site-module" id="services">
+  	<div class="container bloc-lg bloc-heading">
+  		<div class="row row-no-gutters">
+  			<div class="col-sm-12" id="service">
+  				<h1 class=" text-center hero-bloc-text tc-white tc-smoky-black text-center-xs">
+  					What services do we provide?
+  				</h1>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!-- bloc-5 END -->
+
+  <!-- bloc-6 -->
+  <div class="bloc bg-web-services tc-white bgc-white service-web service" id="bloc-6">
+  	<div class="container bloc-xl">
+  		<div class="row service--plate content-decoration">
+  					<div class="row">
+  						<div class="col-sm-12">
+  							<h2 class="mg-md tc-white text-left-xs service-header">
+  								Web applications development and integration.
+  							</h2>
+  						</div>
+  					</div>
+  					<div class="row">
+  						<div class="col-sm-12">
+  							<div class="col-sm-6 col-sm-push-6 col-sm-67 col-sm-6668">
+
+  								<img class="img-responsive image-resize-mode"
+  									src="assets/responsive-displays-320.png"
+  									srcset="assets/responsive-displays-720.png 700w,
+  													assets/responsive-displays.png 1000w"
+  								/>
+
+  							</div>
+  							<div class="col-sm-6 col-sm-pull-6 col-sm-65 col-sm-6664">
+
+  								<p class=" mg-sm service-description">
+  									Responsive site design leads to best user experience different kinds of devices.<br>
+  								</p>
+  								<ul class="list-pv service-web--list">
+  									<li>
+  										<p class=" mg-sm">
+  											eCommerce solutions, based on market leaders with customizations to fit simlesly your needs. <br>
+  										</p>
+  									</li>
+  									<li>
+  										<p class=" mg-sm">
+  											Single Page Applications development
+  										</p>
+  									</li>
+  								</ul><a href="index.html" class="btn   btn-sq btn-lg btn-block btn-medium-jungle-green">More</a>
+  							</div>
+  						</div>
+  					</div>
+  		</div>
+  	</div>
+  </div>
+  <!-- bloc-6 END -->
+
+  <!-- bloc-8 -->
+  <div class="bloc tc-smoky-black bgc-white service service-mobile" id="bloc-8">
+  	<div class="container bloc-lg">
+  		<div class="row content-decoration">
+  			<div class="row">
+  				<div class="col-sm-12">
+  					<h2 class="mg-lg  tc-smoky-black service-header">
+  						Mobile applications
+  					</h2>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-12">
+  			<div class="col-sm-6 col-sm-push-6">
+  				<div class="center-block blocsapp-device blocsapp-device-iphone6 iphone6-space-grey animated puffIn">
+  					<div id="carousel-mobile-designes" class="carousel slide" data-ride="carousel">
+  					  <!-- Indicators -->
+  					  <ol class="carousel-indicators">
+  					    <li data-target="#carousel-mobile-designes" data-slide-to="0" class="active"></li>
+  					    <li data-target="#carousel-mobile-designes" data-slide-to="1"></li>
+  					  </ol>
+
+  					<div class="carousel-inner" role="listbox">
+  						<div class="item active">
+  							<img src="assets/phone-app.jpg" class="img-responsive" />
+  						</div>
+  						<div class="item">
+  							<img src="assets/phone-app.jpg" class="img-responsive" />
+  							<!--<div class="carousel-caption">
+  								...
+  							</div>-->
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  			<div class="col-sm-6 col-sm-pull-6">
+  				<p class=" mg-md service-description">
+  					We choose to make native mobile applications with frameworks that delivers multiplatform coverage.
+  				</p>
+  				<ul class="list-pv service-mobile--list">
+  					<li>
+
+  								<img src="assets/react.svg" class="service--icon" />
+  								<span class="text-left">
+  									React Native
+  								</span>
+
+  					</li>
+  					<li>
+
+  								<img src="assets/Xamagon.png" class="service--icon" />
+
+  								<span class="text-left">
+  									Xamarin
+  								</span>
+
+  					</li>
+  					<li>
+
+  								<img src="assets/nativescript.png" class="service--icon" />
+
+  								<span  class="text-left">
+  									NativeScript/Angular2
+  								</span>
+
+  					</li>
+  				</ul><a href="index.html" class="btn btn-lg btn-sq btn-block btn-medium-jungle-green">More</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  	</div>
+  </div>
+  <!-- bloc-8 END -->
+
+  <!-- bloc-9 -->
+  <div class="bloc bg-business-solutions bgc-white tc-white service service-bs" id="bloc-9">
+  	<div class="container bloc-xl">
+  		<div class="row service--plate content-decoration">
+  					<div class="row">
+  						<div class="col-sm-12">
+  							<h2 class="mg-md  tc-white service-header">
+  								Business solutions
+  							</h2>
+  						</div>
+  					</div>
+  					<div class="row">
+
+
+  					<div class="col-sm-6">
+  						<div class="center-block blocsapp-device blocsapp-device-imac">
+  							<img class="img-responsive"
+  										src="assets/chats-640.jpg"
+  										srcset="assets/chats-320.jpg 300w,
+  														assets/chats-640.jpg 1000w"
+  							/>
+  						</div>
+  					</div>
+  					<div class="col-sm-6">
+  						<p class="service-description">
+  							Solutions that powers-up your business
+  						</p>
+  						<ul class="list-pv service-mobile--list">
+
+  							<li>
+
+  										<img src="assets/mautic.png" class="service--icon" />
+  										<span class="text-left">
+  											Marketing automation
+  										</span>
+
+  							</li>
+  							<li>
+
+  										<img src="assets/logo_bpm.png" class="service--icon service--icon-white-bg" />
+
+  										<span class="text-left">
+  											CRM / bpm*online
+  										</span>
+
+  							</li>
+  							<li>
+
+  										<img src="assets/splunk-logo-round.png" class="service--icon" />
+
+  										<span class="text-left">
+  											Splunk
+  										</span>
+
+  							</li>
+  						</ul>
+  						<a href="index.html" class="btn   btn-sq btn-lg btn-block btn-medium-jungle-green">More</a>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  <!-- bloc-9 END -->
+
+  <!-- bloc-10 -->
+  <div class="bloc l-bloc bgc-white service service-security" id="bloc-10">
+  	<div class="container bloc-xl">
+  			<div class="row">
+  				<div class="row">
+  					<div class="col-sm-12">
+  						<h2 class="mg-md  service-header">
+  								Security and IT infrastructure
+  						</h2>
+  					</div>
+  				</div>
+  				<div class="row">
+  					<div class="col-sm-12">
+  					<div class="col-sm-6">
+  						<div class="center-block blocsapp-device blocsapp-device-mb blocsapp-device-mbp">
+  							<img class="img-responsive"
+  										src="assets/HIPAA_Dashboard_screenshot-320.jpg"
+  										srcset="assets/HIPAA_Dashboard_screenshot-320.jpg 600w,
+  														assets/HIPAA_Dashboard_screenshot.jpg 1000w"
+  							/>
+  						</div>
+  					</div>
+  					<div class="col-sm-6">
+  						<p class="service-description">
+  							Managing and developing of your infrastructure
+  						</p>
+  						<ul class="list-pv service-security--list">
+
+  							<li>
+  								<span>
+  									Cloud infrastructure development and management
+  								</span>
+  							</li>
+  							<li>
+  								<span>
+  									Audit and pentest of your infrastructure to provide full view of your current <br><br>
+  								</span>
+  							</li>
+  						</ul>
+  						<a href="index.html" class="btn   btn-sq btn-lg btn-block btn-medium-jungle-green">More</a>
+  					</div>
+  				</div>
+  				</div>
+  			</div>
+  	</div>
+  </div>
+  <!-- bloc-10 END -->
+</article>
+<!-- services END -->
+
+<!-- contacts -->
+<article data-post-id="contacts">
+<!-- Contact Canada -->
+<div class="bloc full-width-bloc bg-Canada-location tc-white bgc-white l-bloc contacts site-module" id="contacts">
+	<div class="container">
+		<div class="row l-bloc">
+			<div class="col-sm-4">
+			</div>
+			<div class="col-sm-4">
+				<div class="row row-no-gutters">
+					<div class="col-sm-12">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="row voffset-lg">
+					<div class="col-sm-12">
+						<div class="panel panel-sq fade-bg">
+							<div class="panel-body">
+									<h3 class="mg-md  tc-white contact-title">
+										<i class="fa fa-map-o" aria-hidden="true"></i>
+										<a href="https://www.google.com.ua/maps/place/1581+Granada+Crescent,+Victoria,+BC+V8N+2B8,+Canada/@48.4831669,-123.3422299,501m/data=!3m2!1e3!4b1!4m5!3m4!1s0x548f717e77cf96fb:0xe0506983681b8a42!8m2!3d48.4831669!4d-123.3400412" class="a-btn" target="_blank">
+											Canada office location
+										</a>
+									</h3>
+								<address>
+									Canada, Vancouver<br/>
+									1581 Granada crest<br/>
+									<i class="fa fa-phone" aria-hidden="true">&nbsp;</i><abbr title="Phone">P:</abbr>&nbsp;<span>+1 250 891 5430<span><br/>
+									<i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><abbr title="Mail">M:</abbr>&nbsp;<a href="mailto:ca.office@pixelvalue.io">ca.office@pixelvalue.io</a>
+								</address>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact Canada END -->
+
+<!-- Contact Kyiv -->
+<div class="bloc full-width-bloc bgc-white bg-Kyiv-location d-bloc contacts" id="bloc-12">
+	<div class="container">
+		<div class="row l-bloc">
+			<div class="col-sm-4">
+				<span class="empty-column"></span>
+			</div>
+			<div class="col-sm-4">
+				<div class="row row-no-gutters">
+					<div class="col-sm-12">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="row voffset-lg">
+					<div class="col-sm-12">
+							<div class="panel panel-sq fade-bg">
+							<div class="panel-body">
+									<h3 class="mg-md  tc-white contact-title">
+										<i class="fa fa-map-o" aria-hidden="true"></i>
+										<a href="https://www.google.com.ua/maps/place/Vyborzka+St,+104,+Kyiv/@50.4516251,30.4236405,791m/data=!3m1!1e3!4m5!3m4!1s0x40d4cc408497cb67:0xc1de3dc49d80e182!8m2!3d50.4520985!4d30.4217489" class="a-btn" target="_blank">
+										Kyiv office location
+										</a>
+									</h3>
+								<address>
+										Ukraine, Kyiv<br/>
+										Vyborzka Street, 104<br/>
+										<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<abbr title="Phone">P:</abbr>&nbsp;<span>+38 044 232 37 68</span><br/>
+										<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<abbr title="Mail">M:</abbr>&nbsp;<a href="mailto:ua.office@pixelvalue.io">ua.office@pixelvalue.io</a>
+									</div>
+								</address>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact Kyiv END -->
+</article>
+<!-- contacts END -->

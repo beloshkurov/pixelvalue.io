@@ -30,6 +30,14 @@
 }
 /* end of landing height */
 
+.list-pv {
+  list-style-type: circle;
+  font-size: 16px;
+}
+
+.service-description {
+  font-size: 18px;
+}
 
 .hero-bloc-text{
   font-size:25px;
