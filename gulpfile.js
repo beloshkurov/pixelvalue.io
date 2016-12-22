@@ -127,7 +127,7 @@ gulp.task('images', function() {
   return gulp.src(paths.images)
     // Pass in options to the task
     .pipe(imagemin({optimizationLevel: 5},
-    [pngquant(), imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng(), imagemin.svgo()]
+    [pngquant(), imagemin.gifsicle(), imagemin.jpegtran({ progressive: true }), imagemin.optipng(), imagemin.svgo()]
     ))
     .pipe(gulp.dest('docs/assets/'))
 })
