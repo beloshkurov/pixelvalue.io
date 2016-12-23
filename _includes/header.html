@@ -16,9 +16,9 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-1" id="main-menu">
 				<ul class="site-navigation nav navbar-nav pull-right">
-        {% assign posts = site.posts | sort: 'date'  %}
-        {% for post in posts %}
-          <li><a href="#{{ post.link }}" class="ltc-white">{{ post.link }}</a></li>
+        {% assign links = page.links  %}
+        {% for link in links %}
+          <li><a href="#{{ link }}" class="ltc-white">{{ link }}</a></li>
         {% endfor %}
 				</ul>
 			</div>

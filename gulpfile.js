@@ -12,7 +12,7 @@ const gulp = require('gulp'),
       importCss = require('gulp-import-css'),
       autoprefixer = require('gulp-autoprefixer'),
       uncss = require('gulp-uncss'),
-      minifyCss = require('gulp-minify-css'),
+      cleanCss = require('gulp-clean-css'),
       rename = require('gulp-rename'),
 
       imagemin = require('gulp-imagemin'),
@@ -102,7 +102,7 @@ gulp.task('css', function() {
           ]
        }))
        .pipe(map(log))*/
-       .pipe(minifyCss({ keepBreaks:false }))
+       .pipe(cleanCss())
        .pipe(rename('index.min.css'))
        .pipe(gulp.dest('docs/css/'))
 })
