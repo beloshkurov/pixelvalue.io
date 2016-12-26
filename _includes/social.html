@@ -1,0 +1,17 @@
+{% if page.facebook_header %}
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ page.fb_title }}" />
+    <meta property="og:site_name" content="Pixel Value" />
+    <meta property="og:description" content="{{ page.fb_description }}" />
+    <meta property="og:image" content="{{ site.url }}{{ page.fb_image }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+{% endif %}
+
+{% if page.twitter_card %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PixelValueInc" />
+    <meta name="twitter:title" content="{{ page.tw_title }}" />
+    <meta name="twitter:description" content="{{ page.tw_description }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ page.tw_image }}" />
+{% endif %}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="canonical" href="{{ site.url }}{{ page.path }}" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,8 @@
 
     <title>{{ page.title }}</title>
     {% include favicon.html %}
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:site_name" content="Pixel Value">
-    <meta property="og:image" content="{{ site.url }}{{ site.og_image }}"/>
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US" />
 
+    {% include social.html %}
     <meta name="description" content="{{ page.description }}">
 
     <!-- build:css -->
@@ -25,6 +22,7 @@
     <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lustria&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
   </head>
   <body data-spy="scroll" style="position: relative" data-target="#main-menu">
     <div class="page-container">
@@ -79,6 +77,23 @@
         "availableLanguage": ["English", "Ukrainian", "Russian"]
       }]
     }
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '228235587628492',
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
   </body>
 </html>

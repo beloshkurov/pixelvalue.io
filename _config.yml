@@ -13,7 +13,17 @@ defaults:
         - vision
         - services
         - contacts
+      facebook_header: true
+      fb_site_name: "PixelValue"
+      fb_title: "PixelValue Outsource Company"
+      fb_description: "PixelValue provide development and intergration services for any kind of business"
+      fb_image: "/assets/pv-isometric-orange.jpg"
+      fb_app_id: "228235587628492"
+
+      twitter_card: true
+      tw_title: "PixelValue Outsource Company"
+      tw_description: "PixelValue provide development and intergration services for any kind of business"
+      tw_image: "/assets/pv-isometric-orange.jpg"
 
 
 url: "http://pixelvalue.io"
-og_image: "/assets/og_image.png"
