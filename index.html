@@ -309,11 +309,60 @@
 </article>
 <!-- services END -->
 
+
+<script>
+    function initMaps() {
+      var maps = [
+            {
+              s: document.querySelector('.map-canada'),
+              o: {
+                  center: new google.maps.LatLng(48.4831669, -123.34004119999997),
+                  zoom: 18,
+                  mapTypeId: 'hybrid',
+                  panControl: false,
+                  zoomControl: true,
+                  scaleControl: true,
+                  scrollwheel: false
+              }
+            },
+            {
+              s: document.querySelector('.map-kyiv'),
+              o: {
+                  center: new google.maps.LatLng(50.452098, 30.421749),
+                  zoom: 18,
+                  mapTypeId: 'roadmap',
+                  panControl: false,
+                  zoomControl: true,
+                  scaleControl: true,
+                  scrollwheel: false
+              }
+            }
+          ];
+
+
+
+
+        maps.forEach(function (c) {
+          var map = new google.maps.Map(c.s, c.o)
+          map.setTilt(45)
+
+          var marker = new google.maps.Marker({
+              position: c.o.center,
+              map: map
+          })
+        })
+
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp6uh3n_tJV49wHa6PUoK3bS3bLhlLh5c&v=3.exp&callback=initMaps" async defer></script>
+
+
 <!-- contacts -->
 <article data-post-id="contacts">
 <!-- Contact Canada -->
 <div class="bloc full-width-bloc bg-Canada-location tc-white bgc-white l-bloc contacts site-module" id="contacts">
 	<div class="container">
+    <div class="map-canada"></div>
 		<div class="row l-bloc">
 			<div class="col-sm-4">
 			</div>
@@ -353,6 +402,7 @@
 <!-- Contact Kyiv -->
 <div class="bloc full-width-bloc bgc-white bg-Kyiv-location d-bloc contacts" id="bloc-12">
 	<div class="container">
+    <div class="map-kyiv"></div>
 		<div class="row l-bloc">
 			<div class="col-sm-4">
 				<span class="empty-column"></span>

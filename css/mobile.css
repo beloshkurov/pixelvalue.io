@@ -93,6 +93,12 @@
 }
 
 
+.map-canada, .map-kyiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .bg-web-services.bloc {
 	background-image:url('../assets/web-services-bg-320.jpg');
 }

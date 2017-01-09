@@ -843,16 +843,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	border-color:#ffffff!important;
 }
 
-/* Bloc image backgrounds */
-
-.bg-Canada-location{
-	background-image:url("../assets/Canada-location.jpg");
-}
-
-.bg-Kyiv-location{
-	background-image:url('../assets/Kyiv-location-2.jpg');
-}
-
 
 @media (min-width: 1200px) {
 
