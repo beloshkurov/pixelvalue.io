@@ -92,6 +92,9 @@
   right: .5em;
 }
 
+.location-description--cover {
+    margin-right: 40px;
+}
 
 .map-canada, .map-kyiv {
   position: absolute;

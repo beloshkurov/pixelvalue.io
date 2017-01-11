@@ -312,7 +312,8 @@
 
 <script>
     function initMaps() {
-      var maps = [
+      var sizeX = sizeY = 36,
+          maps = [
             {
               s: document.querySelector('.map-canada'),
               o: {
@@ -322,7 +323,14 @@
                   panControl: false,
                   zoomControl: true,
                   scaleControl: true,
-                  scrollwheel: false
+                  scrollwheel: false,
+                  icon: {
+                    //url: '/apple-touch-icon.png',
+                    url: '/assets/Logo-static-fixed.svg',
+                    scaledSize: new google.maps.Size(sizeX, sizeY),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(sizeX/2, sizeY/2)
+                  }
               }
             },
             {
@@ -334,13 +342,17 @@
                   panControl: false,
                   zoomControl: true,
                   scaleControl: true,
-                  scrollwheel: false
+                  scrollwheel: false,
+                  icon: {
+                    //url: '/apple-touch-icon.png',
+                    url: '/assets/Logo-static-fixed.svg',
+                    scaledSize: new google.maps.Size(sizeX, sizeY),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(sizeX/2, sizeY/2)
+                  }
               }
             }
           ];
-
-
-
 
         maps.forEach(function (c) {
           var map = new google.maps.Map(c.s, c.o)
@@ -348,10 +360,10 @@
 
           var marker = new google.maps.Marker({
               position: c.o.center,
+              icon: c.o.icon,
               map: map
           })
         })
-
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp6uh3n_tJV49wHa6PUoK3bS3bLhlLh5c&v=3.exp&callback=initMaps" async defer></script>
@@ -363,7 +375,7 @@
 <div class="bloc full-width-bloc bg-Canada-location tc-white bgc-white l-bloc contacts site-module" id="contacts">
 	<div class="container">
     <div class="map-canada"></div>
-		<div class="row l-bloc">
+		<div class="row l-bloc location-description--cover">
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-4">
@@ -403,7 +415,7 @@
 <div class="bloc full-width-bloc bgc-white bg-Kyiv-location d-bloc contacts" id="bloc-12">
 	<div class="container">
     <div class="map-kyiv"></div>
-		<div class="row l-bloc">
+		<div class="row l-bloc location-description--cover">
 			<div class="col-sm-4">
 				<span class="empty-column"></span>
 			</div>
